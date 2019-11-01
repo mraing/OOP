@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>2. 类的继承</title>
+</head>
+<body>
+
+  <button>点击</button>
+
+  <script>
+    
+    class Father {
+      constructor (x, y) {
+        this.x = x;
+        this.y = y;
+      }
+      sum () {
+        console.log('Father加法: ', + this.x + this.y);
+      }
+      connections () {
+        return '我是爸爸'
+      }
+    };
+    
+    // 继承
+    class Son extends Father {
+      connections () {
+        console.log(super.connections() + '的儿子')
+      }
+    }
+
+    var son = new Son(3, 3)
+    son.sum ()
+    
+    son.connections()
+
+    // 扩展
+    class Son2 extends Father {
+      constructor (x, y) {
+        super(x, y)
+        this.x = x;
+        this.y = y;
+      }
+      subduction () {
+        console.log('Son2 减法: ', this.x - this.y)
+      }
+    }
+
+    var son2 = new Son2(5, 3);
+    son2.sum();
+    son2.subduction();
+    
+    // 实践练习，利用实例化一个对象，其中包含按钮的点击方法
+    class HandleBtn {
+      constructor (name) {
+        this.name = name;
+        this.btn = document.querySelector('button');
+        this.btn.onclick = this. handleBtn;
+      }
+      handleBtn () {
+        console.log(this.name , '点击了按钮')
+      }
+    }
+    var btn = new HandleBtn('绪锋呀');
+
+
+    // this 指向问题
+    class ThisProject {
+      constructor (name, hobby) {
+        // constructor 中的 this 指向创建的实例对象
+        this.name = name
+        this.hobby = hobby
+      }
+      sing () {
+        // 函数的 this 指向调用者
+        console.log(this)
+      }
+    }
+
+    var ldh = new ThisProject('刘德华', '58');
+    ldh.sing()
+  </script>
+</body>
+</html>

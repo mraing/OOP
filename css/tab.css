@@ -1,0 +1,74 @@
+html,body,ul,li,p,h1,h2{
+  margin: 0;
+  padding: 0;
+}
+
+li{list-style: none;}
+
+h4 {
+  padding: 20px 40px;
+}
+
+.tab-box{
+  margin: auto;
+  width: 1200px;
+  border: 1px solid yellowgreen;
+}
+
+.fisrstnav{
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid yellowgreen;
+}
+
+.fisrstnav-list{
+  flex: 1;
+  display: flex;
+}
+
+.fisrstnav-list>li{
+  position: relative;
+  padding: 0 20px;
+  height: 51px;
+  cursor: pointer;
+  border-right: 1px solid yellowgreen;
+}
+
+.fisrstnav-list>li>.iconfont{
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+  font-size: 12px;
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
+}
+.tabadd{
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid yellowgreen;
+}
+
+.tabscon{
+  padding: 20px;
+}
+
+.tabscon>section{
+  display: none;
+  font-weight: 700;
+  color: rebeccapurple;
+}
+
+.conactive{
+  height: 500px;
+  display: block !important;
+}
+
+.liaction{
+  background: #fff;
+}

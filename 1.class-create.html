@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>1.创建类和对象</title>
+  </head>
+
+  <body>
+    <script>
+      // 创建类
+      class User {
+        constructor(name) {
+          this.name = name;
+        }
+        sing (msg) {
+          console.log(this.name + ':' + msg);
+        }
+      }
+      // 利用类实例化对象 new
+
+      var myInfo = new User("绪锋");
+
+      myInfo.sing("断点");
+
+    </script>
+  </body>
+</html>

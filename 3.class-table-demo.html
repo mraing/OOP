@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>3.面向对象案例</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1296139_fvv6d6i53pt.css">
+  <link rel="stylesheet" href="./css/tab.css">
+</head>
+<body>
+
+  <!-- 功能需求
+  1. 点击 tab 栏吗，可以切换效果。
+  2. 点击 + 号，可以添加 tab 项和内容。
+  3. 点击 x 号，可以删除当前的 tab 项和内容项。
+  4. 双击 tab 项文字或者内容型文字，可以修改里面的文字内容。 -->
+
+  <main>
+    <h4>JS 面向对象 动态添加标签页</h4>
+    <div class="tab-box" id="tab">
+      <!-- tab 标签 -->
+      <nav class="fisrstnav">
+        <ul class="fisrstnav-list">
+          <li class="liaction">
+            <span>测试 1</span>
+            <i class="iconfont icon-shanchu"></i>
+          </li>
+          <li>
+            <span>测试 2</span>
+            <i class="iconfont icon-shanchu"></i>
+          </li>
+          <li>
+            <span>测试 3</span>
+            <i class="iconfont icon-shanchu"></i>
+          </li>
+        </ul>
+        <div class="tabadd">
+          <span>+</span>
+        </div>
+      </nav>
+
+      <!-- tab 内容 -->
+      <div class="tabscon">
+        <section class="conactive">测试 1</section>
+        <section>测试 2</section>
+        <section>测试 3</section>
+      </div>
+    </div>
+
+  </main>
+  <script src="./js/tab.js"></script>
+</body>
+</html>
